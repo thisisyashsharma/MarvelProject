@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Project 2 011021
+    </title>
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="PP2.css" type="text/css">
+
+    <!-- font awsome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+    /* --green: rgb(11, 177, 66); */
+    --green: rgb(235, 161, 0);
+    --black: rgb(95, 95, 95);
+    --light-color:rgb(165, 165, 165);
+    --bg-color:#e9e9e9;
+    --border:.1rem solid rgb(0,0,0,0.2);
+    --box-shadow:.4rem .4rem 1rem #ccc,
+                -.4rem -.4rem 1rem #fff;;
+    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+                      -.4rem -.4rem 1rem #fff inset; 
+}
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s ease;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+body{
+    background-color:var(--bg-color);
+    padding-left: 30rem;
+}
+body.active{
+    --green: rgb(255, 75, 75);
+    --black: #fff;
+    --light-color:#ddd;
+    --bg-color:#222;
+    --border:.1rem solid rgb(0,0,0,0.4);
+    --box-shadow:.4rem .4rem 1rem #111,
+                -.4rem -.4rem 1rem #333;;
+    --box-shadow-inset:.4rem .4rem 1rem #111 inset,
+                      -.4rem -.4rem 1rem #333 inset; 
+
+}
+section{
+    min-height: 100vh;
+    padding:2rem;
+}
+.btn{
+    margin-top:1em;
+    display: inline-block;
+    padding:1.5rem 5rem;
+    font-size: 1.5rem;
+    border-radius:1rem;
+    box-shadow: var(--box-shadow);
+    
+    color:var(--black);
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: var(--box-shadow-inset);
+    color:var(--green);
+}
+.heading{
+    font-size:7rem;
+    text-align:center;
+    color:var(--black);
+    padding-bottom: 2rem;
+    text-transform:uppercase;
+
+}
+.heading span{
+    color:var(--green);
+    padding-bottom: 2rem;
+
+}
+
+.header{
+    border-right: var(--border);
+    position:fixed;
+    top: 0;left: 0;
+    z-index: 999;/*find out the work on z-index here */
+    background-color:var(--bg-color);
+    width:30rem;
+    height:100%;
+    padding:2rem;
+    text-align:center;
+}
+
+.header .user img{
+    margin:1rem 0;
+    /* xperiment- white,black */
+    border:1rem solid transparent; 
+    border-right: 50%; /* experiment with this because i don't able to see the work of this */
+    height:14rem;
+    width:14rem;
+    border-radius: 20rem;
+    box-shadow: var(--box-shadow);
+}
+.header .user h1{
+    color:var(--black);
+    font-size: 3rem;
+}
+.header .user p{
+    color:var(--green);
+    font-size: 1.5rem;
+}
+
+.header .navbar{
+    padding-top:1rem;
+    /* delete */
+    /* border:1px solid rgb(184, 184, 184); */
+}
+.header .navbar a{
+    display:block;
+    margin:1.5rem 0;
+    padding:.7rem;
+    border-radius: 1rem;
+    font-size:2rem;
+    box-shadow: var(--box-shadow);
+    color:var(--black);
+}
+.header .navbar a:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+
+
+/* main start */
+ 
+#menu-btn{
+    position: fixed;
+    top: 1.5rem;left:2rem;
+    height:5rem;
+    width:5rem;
+    line-height: 5rem;
+    border-radius:50%;
+    box-shadow: var(--box-shadow); 
+
+    font-size: 2rem;
+    text-align:center;
+    color:var(--black);
+
+    cursor: pointer;
+    z-index: 1000; 
+    display: none;
+}
+#menu-btn:hover{
+    color:var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+#theme-toggler{
+    position: fixed;
+    top: 1.5rem;right:2rem;
+    z-index: 1000; 
+    height:5rem;
+    width:5rem;
+    line-height: 5rem;
+    border-radius:50%;
+    
+    font-size: 2rem;
+    cursor: pointer;
+    
+    box-shadow: var(--box-shadow); 
+    text-align:center;
+    color:var(--black)
+}
+#theme-toggler:hover{
+    color:var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+
+.home{
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    
+}
+.home .content h3{
+    font-size:7rem;
+    color:var(--black);
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+.home .content p{
+    font-size: 3rem;
+    color:var(--green);
+    padding-bottom: 0.5rem;
+}
+.home .share {
+    position: relative;
+    top:10rem;
+    border-radius: 2rem;
+    padding:1rem 7rem;
+    box-shadow: var(--box-shadow);
+}
+
+.home .share a {
+    height:5rem;
+    width:5rem;
+    line-height:5rem;
+    box-shadow: var(--box-shadow);
+    margin:1rem;
+    border-radius:1rem;
+
+    font-size:2rem;
+    color:var(--black);
+}
+
+.home .share a:hover {
+    box-shadow: var(--box-shadow-inset);
+    color:var(--green);
+}
+.about .row {
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap:1rem;
+}
+
+.about .row .box-container{
+    flex:1 1 40rem;
+    display:flex;
+    gap:1.5rem;
+    flex-wrap: wrap;
+
+  }
+.about .row .box-container .box {
+    flex:1 1 20rem;
+    text-align: center;
+    padding:2rem;
+    border-radius:1rem;
+    box-shadow: var(--box-shadow);
+ 
+}
+.about .row .box-container .box h3{
+    font-size:5rem;
+    color:var(--black);
+    line-height: 1.1;
+}
+.about .row .box-container .box p{
+    font-size:2rem;
+    font-weight: bold;
+    color:var(--black);
+    padding:0.5rem 0;
+}
+
+.about .row .content{
+    flex:1 1 40rem;
+}
+.about .row .content h3{
+    font-size:2.5rem;
+    color:var(--black);
+    line-height:1.8
+}
+
+.about .row .content span{
+    color:var(--green);
+}
+.about .row .content p{
+    font-size:1.5rem;
+    color:var(--light-color);
+    line-height:1.8;
+    padding:1rem 0;
+}
+.about .row :nth-child(3){
+    padding:0.5rem 0 0 0;
+}
+.about .row .progress{
+    flex:1 1 40rem;
+
+}
+.about .row .progress h3{
+    color:var(--black);
+    font-weight: normal;      /* experiment on it by deleting it or varrying the values  */
+    font-size: 2rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:2rem 1rem;  /* just added to experiment*/
+}
+.about .row .progress .bar{
+    box-shadow: var(--box-shadow);
+    height:2rem;
+    border-radius: 5rem;
+    padding:0.5rem;
+    margin:2rem 1rem;
+}
+
+.about .row .progress .bar span{
+    display: block;
+    height: 100%;
+    background: var(--green);
+    border-radius: .5rem;
+}
+.about .row .progress .bar-1-1 span{
+    width: 90%;
+}
+.about .row .progress .bar-1-2 span{
+    width: 60%;
+}
+.about .row .progress .bar-1-3 span{
+    width: 87%;
+}
+.about .row .progress .bar-2-1 span{
+    width: 96%;
+}
+.about .row .progress .bar-2-2 span{
+    width: 99%;
+}
+.about .row .progress .bar-2-3 span{
+    width: 78%;
+}
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));/* experiment the values it is important   */
+    gap:2rem;
+}
+.services .box-container .box{
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    border-radius:2rem;
+    position:relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.services .box-container .box i{
+    font-size:4rem;
+    padding-bottom: 6rem;
+    color:white;
+    
+}   
+.services .box-container .box h3{
+    font-size:2rem;
+    padding-bottom: 1rem;
+    color:var(--black);
+}    
+.services .box-container .box p{
+    font-size:1.4rem;
+    line-height:1.8;
+    color:var(--light-color);
+}
+.services .box-container .box::before{
+    content:"";
+    position:absolute;
+    top: 0rem;; left:0; 
+    height:100%;
+    width:100%;
+    background:var(--green);
+    z-index: -1;
+    clip-path: circle(10rem at 2% 2%);/* experiment with that new thing happend */
+    transition:0.3s ease-in-out;
+}
+
+
+.services .box-container .box:hover::before{
+    clip-path: circle(100%);/* experiment with that new thing happend */
+}   
+.services .box-container .box:hover > *{
+    color:#fff;
+}
+
+.portfolio .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));/* experiment the values it is important   */
+    gap:2rem;
+}
+.portfolio .box-container .box{
+    box-shadow: var(--box-shadow);
+    height:25rem;
+    border-radius: 4rem;
+    overflow:hidden;
+    position: relative;
+    border:2rem solid transparent;
+}
+.portfolio .box-container .box img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+.portfolio .box-container .box .content{
+    position: absolute;
+    top:0; left: 0;
+    height:100%;
+    width:100%;
+    background: var(--bg-color);
+    display:grid;
+    place-items:center; 
+    transform: scale(0);
+}
+.portfolio .box-container .box:hover .content{
+    transform: scale(1);
+}
+.portfolio .box-container .box .content h3{
+    font-size:2.5rem;
+    color:var(--black);
+    text-transform:uppercase;
+    transform:translateY(-5rem);
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+.portfolio .box-container .box:hover .content h3{
+    transform:translateY(0rem);
+    opacity:1;
+}
+
+.contact form{
+    margin:1rem 3rem;
+    max-width: 100rem;
+    border-radius:3rem;
+    padding:2rem 3rem;
+    box-shadow: var(--box-shadow);
+
+}
+
+.contact form .box{
+    padding:1rem 2rem;
+    width: 100%;
+    background:none;   /* experiment with the value to understand the syntax*/
+    font-size:1.6rem;
+    text-transform:none;
+    color:var(--black);
+    margin:1rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius:1.5rem;
+    
+}
+.contact form textarea{
+    height:20rem;
+    resize:none;
+}
+.contact form .box:focus{
+    box-shadow: var(--box-shadow-inset);
+}
+
+.credits{
+    font-size:2rem;
+    text-align: center;
+    padding:2.5rem 1rem;
+    margin-top:1rem;
+    border-top:2px solid rgba(0, 0, 0, 0.186);
+    color:var(--black);
+}
+.credits span{
+    color:var(--green);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+    body{
+        padding-left: 0;
+    }
+    .header{
+        left: -110%;
+    }
+    .header.active{
+        left:0%;
+        transition: .4s ease-in;
+    }
+    #menu-btn{
+        display:initial;
+    }
+}
+
+@media (max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+    .header{
+        width:100%;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+        <div class="user">
+            <img src="other files\image\user-img.jpg" alt="user image">
+            <h1>Goose</h1>
+            <p>Type:Flerken </p>
+        </div>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!-- header section end  -->
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <!-- theme toggler -->
+    <div id="theme-toggler" class="fas fa-moon"></div>
+
+
+
+
+    <!-- home selection starts -->
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Goose</h3>
+            <p>Captain Marvel's cat</p>
+            <a href="#" class="btn">Download feed Items</a>
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+
+    </section>
+    <!-- HOME selection end -->
+
+
+
+
+
+
+    <!-- ABOUT section starts -->
+    <section class="about" id="about">
+        <h1 class="heading"><span>About</span>Me</h1>
+        <div class="row">
+            <div class="box-container">
+                <div class="box">
+                    <h3>2</h3>
+                    <p>Galaxies defence range</p>
+                </div>
+                <div class="box">
+                    <h3>450+</h3>
+                    <p>Life defended from attack</p>
+                </div>
+                <div class="box">
+                    <h3>190+</h3>
+                    <p>working hours</p>
+                </div>
+                <div class="box">
+                    <h3>273+</h3>
+                    <p>awards from different planet</p>
+                </div>
+            </div>
+            <div class="content">
+                <h3>My name is <span>Goose</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ullam amet odit. Ipsa enim eaque
+                    consequatur reiciendis quos sapiente, quasi quae blanditiis hic, assumenda omnis cumque, dolores
+                    deleniti esse quis. Odio, excepturi deleniti! Dignissimos dolorum, obcaecati aliquid quasi nemo, a
+                    dolor nulla voluptate deserunt quaerat nesciunt, provident praesentium optio quas!</p>
+                <!--    The button is not working and its not in the size as it needed to be.CORRECT IT AND FIND THE BUG   bar-1-1-->
+                <a href="#" class="btn">Contact Me</a>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="progress">
+                <h3> Web design <span>90%</span></h3>
+                <div class="bar bar-1-1"><span></span></div>
+                <h3> Graphic design <span>60%</span></h3>
+                <div class="bar bar-1-2"><span></span></div>
+                <h3> UI/UX design <span>87%</span></h3>
+                <div class="bar bar-1-3"><span></span></div>
+            </div>
+
+            <div class="progress">
+                <h3> HTML <span>96%</span></h3>
+                <div class="bar bar-2-1"><span></span></div>
+                <h3> CSS <span>97%</span></h3>
+                <div class="bar bar-2-2"><span></span></div>
+                <h3> Javascript <span>78%</span></h3>
+                <div class="bar bar-2-3"><span></span></div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT section end -->
+
+
+    <!-- SERVICES section start -->
+    <section class="services" id="services">
+        <h1 class="heading">My<span>Services</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-code"></i>
+                <h3>web design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum quae necessitatibus quo
+                    amet eaque perspiciatis autem repudiandae, voluptatem incidunt, delectus recusandae? Odit aut dicta
+                    nesciunt fugit officiis totam necessitatibus. Sint aliquam dolorum tempora eius optio? In neque
+                    doloremque perferendis.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Graphic design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum quae necessitatibus quo
+                    amet eaque perspiciatis autem repudiandae, voluptatem incidunt, delectus recusandae? Odit aut dicta
+                    nesciunt fugit officiis totam necessitatibus. Sint aliquam dolorum tempora eius optio? In neque
+                    doloremque perferendis.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-mobile"></i>
+                <h3>Responsive design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum quae necessitatibus quo
+                    amet eaque perspiciatis autem repudiandae, voluptatem incidunt, delectus recusandae? Odit aut dicta
+                    nesciunt fugit officiis totam necessitatibus. Sint aliquam dolorum tempora eius optio? In neque
+                    doloremque perferendis.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-search-dollar"></i>
+                <h3>SEO Marketing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum quae necessitatibus quo
+                    amet eaque perspiciatis autem repudiandae, voluptatem incidunt, delectus recusandae? Odit aut dicta
+                    nesciunt fugit officiis totam necessitatibus. Sint aliquam dolorum tempora eius optio? In neque
+                    doloremque perferendis.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Digital Marketing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum quae necessitatibus quo
+                    amet eaque perspiciatis autem repudiandae, voluptatem incidunt, delectus recusandae? Odit aut dicta
+                    nesciunt fugit officiis totam necessitatibus. Sint aliquam dolorum tempora eius optio? In neque
+                    doloremque perferendis.</p>
+            </div>
+            <div class="box">
+                <i class="fab fa-wordpress"></i>
+                <h3>Wordpress</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum quae necessitatibus quo
+                    amet eaque perspiciatis autem repudiandae, voluptatem incidunt, delectus recusandae? Odit aut dicta
+                    nesciunt fugit officiis totam necessitatibus. Sint aliquam dolorum tempora eius optio? In neque
+                    doloremque perferendis.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SERVICES section end -->
+    <!-- PORTFOLIO section starts  -->
+      <section class="portfolio" id="portfolio">
+          <h1 class="heading">My <span>Portfolio</span></h1>
+          
+          <div class="box-container">
+                    
+                <div class="box">
+                    <img src="other files/image/img-1.jpg" alt="">
+                    <div class="content">
+                        <h3>Porject1</h3>
+                    </div>
+                </div>
+                    
+                <div class="box">
+                    <img src="other files/image/img-2.jpg" alt="">
+                    <div class="content">
+                        <h3>Porject2</h3>
+                    </div>
+                </div>
+                    
+                <div class="box">
+                    <img src="other files/image/img-3.jpg" alt="">
+                    <div class="content">
+                        <h3>Porject3</h3>
+                    </div>
+                </div>
+                    
+                <div class="box">
+                    <img src="other files/image/img-4.jpg" alt="">
+                    <div class="content">
+                        <h3>Porject4</h3>
+                    </div>
+                </div>
+                    
+                <div class="box">
+                    <img src="other files/image/img-5.jpg" alt="">
+                    <div class="content">
+                        <h3>Porject5</h3>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="other files/image/img-6.jpg" alt="">
+                    <div class="content">
+                        <h3>Porject6</h3>
+                    </div>
+                </div>
+          </div>
+
+      </section>
+
+    <!-- PORTFOLIO section end  -->
+
+    <!-- CONTACT section starts  -->
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>Contact</span>Me</h1>
+        <form action="">
+            <input type="text" placeholder="your name" class="box">
+            <input type="email" placeholder="your email" class="box">
+            <input type="text" placeholder="subject" class="box">
+           <textarea name="" placeholder="your message" id="" cols="30" rows="10" class="box"></textarea>
+           <input type="submit" value="sub-message" class="btn"> 
+
+        </form>
+
+
+    </section>
+    <!-- CONTACT section end  -->
+
+    <!-- CREDIT section starts -->
+    <div class="credits">
+        created by <span> mr goose </span> | all rights reserved
+    </div>
+    <!-- CREDIT section end -->
+    
+    
+
+
+    <!-- custom js file link -->
+    <!-- <script src="PP2.js"></script> -->
+<script>let menu = document.querySelector('#menu-btn');
+    let header = document.querySelector('.header');
+    
+    menu.onclick = () =>{ 
+        menu.classList.toggle('fa-times');
+        header.classList.toggle('active');
+    }
+    
+    
+    let themeToggler = document.querySelector('#theme-toggler');
+    
+    themeToggler.onclick = () =>{ 
+        themeToggler.classList.toggle('fa-sun');
+        if(themeToggler.classList.contains('fa-sun')){
+            document.body.classList.add('active');
+        }else{
+            document.body.classList.remove('active');
+        }
+    }
+    
+    
+    </script>
+</body>
+
+</html>
