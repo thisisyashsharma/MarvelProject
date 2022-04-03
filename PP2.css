@@ -454,8 +454,12 @@ section{
     border-radius:1.5rem;
     
 }
+.contact from input{
+    padding:1rem;
+}
 .contact form textarea{
     height:20rem;
+    padding:1rem;
     resize:none;
 }
 .contact form .box:focus{
