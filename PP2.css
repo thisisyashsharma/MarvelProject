@@ -461,6 +461,21 @@ section{
 .contact form .box:focus{
     box-shadow: var(--box-shadow-inset);
 }
+.contact form .btn{
+     display: inline-block;
+    padding:1.5rem 5rem;
+    margin:0.5rem;
+    font-size: 1.5rem;
+    border-radius:0.7rem;
+    box-shadow: var(--box-shadow);
+    
+    color:var(--black);
+    cursor: pointer;
+}
+.contact form .btn:hover{
+    box-shadow: var(--box-shadow-inset);
+    color:var(--green);
+}
 
 .credits{
     font-size:2rem;
