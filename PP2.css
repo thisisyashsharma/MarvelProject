@@ -188,6 +188,12 @@ section{
     text-align:center;
     
 }
+
+/* Just added at 060422 */
+.home content a{ 
+    margin:0.5rem;
+    width:10rem;
+}
 .home .content h3{
     font-size:7rem;
     color:var(--black);
