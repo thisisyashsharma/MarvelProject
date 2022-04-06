@@ -191,9 +191,14 @@ section{
 
 /* Just added at 060422 */
 .home content a{ 
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
     margin:0.8rem;
-    width:10rem;
-    border-radius:0.3rem;
+    border-radius:0.7rem;
+    box-shadow: var(--box-shadow);
+    padding:1.5rem 5rem;
+    width:17rem;
 }
 .home content a:hover{
 
