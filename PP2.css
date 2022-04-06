@@ -31,6 +31,8 @@ body{
     background-color:var(--bg-color);
     padding-left: 30rem;
 }
+
+i,
 input,
 textarea,
 button,
@@ -190,21 +192,54 @@ section{
 }
 
 /* Just added at 060422 */
-.home .content bton{ 
+.home .content .links { 
+    margin-top: 6rem;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center; 
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+    border-radius:1.5rem;
+    padding:1rem 0.4rem;
+    /* width: 10rem; */
+    max-width: 68rem;
+
+    position: relative;
+}
+.home .content .links a{ 
     cursor: pointer;
     display: inline-block;
     font-size: 1.5rem;
-    margin:0.8rem;
-    border-radius:0.7rem;
+    height:6rem;
+    
+    margin:1rem;
+    border-radius:0.8rem;
     box-shadow: var(--box-shadow);
-    padding:1.5rem 5rem;
-    width:17rem;
+    padding:1.5rem 1rem 1.5rem 2.7rem;
+    width:25rem;
+    color:var(--green);
+    
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
-.home .content bton:hover{
-
+.home .content .links a i{ 
+    color:var(--bg-color);
+}
+.home .content .links a:hover{
     background-color:var(--green);
+ 
     color:white;
-    box-shadow: var(--box-shadow-inset);
+    
+}
+.home .content .links a:hover i{ 
+    color:white;
+}
+@media (max-width: 500px){
+    .home .content .links a{
+        width: 100%;
+    }
 }
 .home .content h3{
     font-size:7rem;
@@ -240,6 +275,9 @@ section{
 .home .share a:hover {
     box-shadow: var(--box-shadow-inset);
     color:var(--green);
+}
+.about{
+    margin-top:7rem;
 }
 .about .row {
     display:flex;
@@ -427,6 +465,7 @@ section{
 }
 .portfolio .box-container .box .content{
     position: absolute;
+    cursor: pointer;
     top:0; left: 0;
     height:100%;
     width:100%;
@@ -434,21 +473,27 @@ section{
     display:grid;
     place-items:center; 
     transform: scale(0);
+    border-radius:1.8rem;
 }
+ 
 .portfolio .box-container .box:hover .content{
     transform: scale(1);
 }
+ 
 .portfolio .box-container .box .content h3{
     font-size:2.5rem;
-    color:var(--black);
+    color:rgb(65, 87, 255);
     text-transform:uppercase;
     transform:translateY(-5rem);
     opacity: 0;
-    transition-delay: 0.3s;
+    transition-delay: 0.4s;
 }
 .portfolio .box-container .box:hover .content h3{
     transform:translateY(0rem);
     opacity:1;
+}
+.portfolio .box-container .box:hover .content h3:hover{
+    color:rgb(0, 29, 108);
 }
 
 .contact form{
