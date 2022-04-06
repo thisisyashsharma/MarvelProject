@@ -190,7 +190,7 @@ section{
 }
 
 /* Just added at 060422 */
-.home content a{ 
+.home .content bton{ 
     cursor: pointer;
     display: inline-block;
     font-size: 1.5rem;
@@ -200,7 +200,7 @@ section{
     padding:1.5rem 5rem;
     width:17rem;
 }
-.home content a:hover{
+.home .content bton:hover{
 
     background-color:var(--green);
     color:white;
