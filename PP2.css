@@ -252,7 +252,7 @@ section {
     background-color: var(--green);
     border-radius:50%;
     /* opacity:0; */
-    transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
 .bton:hover::before{
@@ -274,7 +274,7 @@ section {
 .home .content .links a:hover i {
   color: white;
 }
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .home .content .links a {
     width: 96%;
     height:9rem;
