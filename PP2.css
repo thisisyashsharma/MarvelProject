@@ -252,7 +252,7 @@ section {
     background-color: var(--green);
     border-radius:50%;
     /* opacity:0; */
-    transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+    transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
 }
 
 .bton:hover::before{
@@ -269,10 +269,7 @@ section {
 
 
 
-.animated {
-  --angle: 5deg;
-  animation: shake 0.4s;
-}
+ 
 
 .home .content .links a:hover i {
   color: white;
