@@ -279,7 +279,9 @@ section {
 }
 @media (max-width: 500px) {
   .home .content .links a {
-    width: 100%;
+    width: 96%;
+    height:9rem;
+    
   }
 }
 .home .content h3 {
