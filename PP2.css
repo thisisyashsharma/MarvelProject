@@ -276,8 +276,8 @@ section {
 }
 @media (max-width: 400px) {
   .home .content .links a {
-    width: 96%;
-    height:9rem;
+    width: 97%;
+    height:8rem;
     
   }
 }
