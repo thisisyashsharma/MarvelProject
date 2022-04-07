@@ -260,22 +260,11 @@ section {
     height:400px;
 }
 
-
-
- 
-
-
-
-
-
-
- 
-
-.home .content .links a:hover i {
+.home .content .links .bton:hover i {
   color: white;
 }
 @media (max-width: 400px) {
-  .home .content .links a {
+  .home .content .links .bton {
     width: 97%;
     height:8rem;
     
