@@ -135,6 +135,7 @@ section {
 }
 .header .navbar a:hover {
   box-shadow: var(--box-shadow-inset);
+  color: var(--green);
 }
 
 /* main start */
@@ -651,11 +652,11 @@ section {
     padding: 2rem;
 
     
-    background-color: rgba(234, 243, 255, 0.211);
+    background-color: rgba(112, 112, 112, 0);
     backdrop-filter: blur(2rem);
   }
   .header.active .user img {
-    margin: 6rem 0 0 0;
+    margin: 9rem 0 0 0;
     border: 1rem solid transparent;
     
     height: 14rem;
