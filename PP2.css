@@ -142,21 +142,22 @@ section {
 #menu-btn {
   position: fixed;
   top: 1.5rem;
-  left: 1rem;
+  left: 2rem;
   height: 5rem;
   width: 5rem;
   line-height: 5rem;
-  border-radius: 50%;
+  border-radius: 22%;
   box-shadow: var(--box-shadow);
-
-  font-size: 2rem;
+  
+  font-size: 2.7rem;
   text-align: center;
   color: var(--black);
-
+  
   cursor: pointer;
   z-index: 1000;
   display: none;
 }
+ 
 #menu-btn:hover {
   color: var(--green);
   box-shadow: var(--box-shadow-inset);
@@ -597,19 +598,21 @@ section {
   }
   body {
     padding-left: 7.5rem;
+    width: 100%;
   }
   .header {
     left: 0%;
     box-shadow: 0 0 0 100rem hsla(0, 0%, 50%, 0);
     width: 6.5rem;
-    padding: 2rem -0.6rem 2rem 1.2rem;
+    padding: 2rem -0.6rem 2rem 0.6rem;
     border-right:none;
 
   
     
   }
   .header .user img {
-    margin: 16rem 0 -1.5rem 0;
+    /* change the margin 16rem and also menu top:1rem  */
+    margin: 5.8rem 0 -1.5rem 0;
     border: 0.7rem solid transparent;
     
     height: 5rem;
@@ -636,6 +639,7 @@ section {
   #menu-btn {
     display: initial;
   }
+ 
   
   /* At Active mode of menu */
   
