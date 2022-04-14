@@ -30,6 +30,7 @@ html {
 body {
   background-color: var(--bg-color);
   padding-left: 30rem;
+  width: 100%;
 }
 
 i,
@@ -50,6 +51,7 @@ body.active {
   --box-shadow: 0.4rem 0.4rem 1rem #111, -0.4rem -0.4rem 1rem #333;
   --box-shadow-inset: 0.4rem 0.4rem 1rem #111 inset,
     -0.4rem -0.4rem 1rem #333 inset;
+
 }
 section {
   min-height: 100vh;
