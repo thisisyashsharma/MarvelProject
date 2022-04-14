@@ -434,7 +434,7 @@ section {
 .services .box-container .box {
   box-shadow: var(--box-shadow);
   padding: 2rem;
-  border-radius: 2rem;
+  border-radius: 2.2rem;
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -488,7 +488,7 @@ section {
 .portfolio .box-container .box {
   box-shadow: var(--box-shadow);
   height: 25rem;
-  border-radius: 4rem;
+  border-radius: 2.5rem;
   overflow: hidden;
   position: relative;
   border: 2rem solid transparent;
@@ -496,6 +496,7 @@ section {
 .portfolio .box-container .box img {
   height: 100%;
   width: 100%;
+  border-radius: 1.9rem;
   object-fit: cover;
 }
 .portfolio .box-container .box .content {
@@ -509,7 +510,7 @@ section {
   display: grid;
   place-items: center;
   transform: scale(0);
-  border-radius: 1.8rem;
+  border-radius: 2rem;
 }
 
 .portfolio .box-container .box:hover .content {
@@ -535,13 +536,13 @@ section {
 .contact form {
   margin: 1rem 3rem;
   max-width: 100rem;
-  border-radius: 3rem;
+  border-radius: 2rem;
   padding: 2rem 3rem;
   box-shadow: var(--box-shadow);
 }
 
 .contact form .box {
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   width: 100%;
   background: none; /* experiment with the value to understand the syntax*/
   font-size: 1.6rem;
@@ -549,7 +550,7 @@ section {
   color: var(--black);
   margin: 1rem 0;
   box-shadow: var(--box-shadow);
-  border-radius: 1.5rem;
+  border-radius: 1.2rem;
 }
 .contact from input {
   padding: 1rem;
