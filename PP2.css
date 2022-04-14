@@ -30,7 +30,7 @@ html {
 body {
   background-color: var(--bg-color);
   padding-left: 30rem;
-  width: 100%;
+  width: 100vw;
 }
 
 i,
@@ -93,7 +93,7 @@ section {
   z-index: 999; /*find out the work on z-index here */
   background-color: var(--bg-color);
   width: 30rem;
-  height: 100%;
+  height: 100vh;
   padding: 2rem;
   text-align: center;
 }
