@@ -84,7 +84,7 @@ section {
 
 .header {
   /* border-right: var(--border); */
-  border-right:0.1rem solid rgba(128, 128, 128, 0.165);
+  border-right: 0.1rem solid rgba(128, 128, 128, 0.165);
   position: fixed;
   top: 0;
   left: 0;
@@ -138,7 +138,7 @@ section {
 #menu-btn {
   position: fixed;
   top: 1.5rem;
-  left: 2rem;
+  left: 1rem;
   height: 5rem;
   width: 5rem;
   line-height: 5rem;
@@ -204,9 +204,6 @@ section {
   position: relative;
 }
 
-  
- 
-
 .home .content .links .bton {
   cursor: pointer;
   display: inline-block;
@@ -232,33 +229,32 @@ section {
   color: var(--bg-color);
 }
 .home .content .links .bton:hover {
-    
-    color: white;
+  color: white;
 }
-.bton span{
-    position:relative;
-    z-index: 1;
-}
-
-.bton::before{
-    content: '';
-    position:absolute;
-    top:50% ;
-    left:50% ;
-    transform: translate(-50%,-50%);
-    
-    width:0;
-    height:0;
-    
-    background-color: var(--green);
-    border-radius:50%;
-    /* opacity:0; */
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+.bton span {
+  position: relative;
+  z-index: 1;
 }
 
-.bton:hover::before{
-    width:400px;
-    height:400px;
+.bton::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 0;
+  height: 0;
+
+  background-color: var(--green);
+  border-radius: 50%;
+  /* opacity:0; */
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+}
+
+.bton:hover::before {
+  width: 400px;
+  height: 400px;
 }
 
 .home .content .links .bton:hover i {
@@ -267,8 +263,7 @@ section {
 @media (max-width: 400px) {
   .home .content .links .bton {
     width: 97%;
-    height:8rem;
-    
+    height: 8rem;
   }
 }
 .home .content h3 {
@@ -597,19 +592,76 @@ section {
     font-size: 55%;
   }
   body {
-    padding-left: 0;
+    padding-left: 7.5rem;
   }
   .header {
-    left: -110%;
-    box-shadow: 0 0 0 80rem hsla(0, 0%, 50%, 0);
-  }
-  .header.active {
     left: 0%;
-    transition: 0.4s ease-in-out;
-    box-shadow: 0 0 0 80rem hsla(0, 0%, 0%, 0.159);
+    box-shadow: 0 0 0 100rem hsla(0, 0%, 50%, 0);
+    width: 7.5rem;
+    padding: 2rem 1.2rem;
+  }
+  .header .user img {
+    margin: 16rem 0 -1.5rem 0;
+    border: 0.7rem solid transparent;
+    
+    height: 5rem;
+    width: 5rem;
+    border-radius: 1.4rem;
+    box-shadow: var(--box-shadow);
+  }
+  .header .user h1 {
+    font-size: 0.001rem;
+  }
+  .header .user p {
+    font-size: 0.001rem;
+  }
+  .header .navbar a {
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    padding-left: 30%;
+  }
+ 
+  .header .navbar span {
+    font-size: 0.000007rem;
   }
   #menu-btn {
     display: initial;
+  }
+  
+  /* At Active mode of menu */
+  
+  .header.active {
+    left: 0%;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 0 100rem hsla(0, 0%, 0%, 0.159);
+    width: 50%;
+    padding: 2rem;
+  }
+  .header.active .user img {
+    margin: 6rem 0 0 0;
+    border: 1rem solid transparent;
+    
+    height: 14rem;
+    width: 14rem;
+    border-radius: 20rem;
+    box-shadow: var(--box-shadow);
+  }
+  .header.active .user h1 {
+    display: block;
+    font-size: 3.5rem;
+  }
+  .header.active .user p {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .header.active .navbar a {
+    text-align: left;
+    padding-left: 6%;
+    box-shadow:0 0 0.1rem rgba(30, 30, 30, 0.234);
+  }
+  .header.active .navbar span {
+    display: inline-block;
+    font-size: 2rem;
   }
 }
 
@@ -617,7 +669,7 @@ section {
   html {
     font-size: 50%;
   }
-  .header {
-    width: 60%;
+  .header.active {
+    width: 50%;
   }
 }
