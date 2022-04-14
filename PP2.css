@@ -128,7 +128,7 @@ section {
 
   display: block;
   margin: 1.5rem 0;  
-  border-radius: 1rem;
+  border-radius: 0.7rem;
   font-size: 2rem;
   box-shadow: var(--box-shadow);
   color: var(--black);
@@ -641,7 +641,7 @@ section {
   #menu-btn {
     display: initial;
   }
- 
+  
   
   /* At Active mode of menu */
   
@@ -651,10 +651,11 @@ section {
     box-shadow: 0 0 0 100rem hsla(0, 0%, 0%, 0.159);
     width: 50%;
     padding: 2rem;
-
+    
     
     background-color: rgba(112, 112, 112, 0);
     backdrop-filter: blur(2rem);
+    overflow:hidden;
   }
   .header.active .user img {
     margin: 9rem 0 0 0;
@@ -675,9 +676,15 @@ section {
   }
   .header.active .navbar a {
     text-align: left;
-    padding-left: 6%;
-    box-shadow:0 0 0.1rem rgba(30, 30, 30, 0.234);
-    width:auto;
+    padding:1.2rem 1.2rem 1.2rem 13%;
+    box-shadow:0 0 0.1rem rgba(30, 30, 30, 0.145);
+    width:120%;
+    
+    margin: 0 0 0 -2rem;  
+    border-radius: 0;
+  }
+  .header.active .navbar a:hover {
+    background-color: rgba(128, 128, 128, 0.152);
   }
   .header.active .navbar span {
     display: inline-block;
