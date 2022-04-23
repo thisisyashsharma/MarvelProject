@@ -543,10 +543,10 @@ section {
 }
 
 .contact form {
-  margin: 1rem 3rem;
+  margin: 0rem;
   max-width: 100rem;
   border-radius: 2rem;
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   box-shadow: var(--box-shadow);
 }
 
@@ -557,7 +557,7 @@ section {
   font-size: 1.6rem;
   text-transform: none;
   color: var(--black);
-  margin: 1rem 0;
+  margin: 1rem 0rem;
   box-shadow: var(--box-shadow);
   border-radius: 1.2rem;
 }
@@ -697,10 +697,10 @@ section {
     box-shadow: 0 0 0 500rem hsla(0, 0%, 0%, 0.541);
     max-width:90%;
     width:auto;
-    /* padding: 2rem; */
+    height:100vh;
     padding: 0rem;
 
-    /* transition:none; */
+
     overflow: hidden;
     border: none;
     animation: menuCard 0.9s ease;
