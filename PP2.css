@@ -2,8 +2,8 @@
 
 :root {
   /* --green: rgb(11, 177, 66); */
-  --green: hsl(28, 100%, 50%);
-  --black: rgb(81, 81, 81);
+  --green: hsl(25, 100%, 57%);
+  --black: rgb(90, 90, 90);
   --light-color: rgb(165, 165, 165);
   --bg-color: #e9e9e9;
   --border: 0.1rem solid rgb(0, 0, 0, 0.2);
@@ -96,6 +96,7 @@ section {
   height: 100vh;
   padding: 2rem;
   text-align: center;
+  
 }
 
 .header .user img {
@@ -617,6 +618,7 @@ section {
     width: 6.5rem;
     padding: 2rem -0.6rem 2rem 0.6rem;
     border-right: none;
+    height: 100vh;
   }
   .header .user img {
     /* change the margin 16rem and also menu top:1rem  */
