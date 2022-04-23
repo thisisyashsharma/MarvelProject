@@ -704,6 +704,7 @@ section {
     overflow: hidden;
     border: none;
     animation: menuCard 0.9s ease;
+    border-bottom:2rem;
     
   }
   .header.active .user img {
