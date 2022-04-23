@@ -3,7 +3,7 @@
 :root {
   /* --green: rgb(11, 177, 66); */
   --green: hsl(28, 100%, 50%);
-  --black: rgb(95, 95, 95);
+  --black: rgb(81, 81, 81);
   --light-color: rgb(165, 165, 165);
   --bg-color: #e9e9e9;
   --border: 0.1rem solid rgb(0, 0, 0, 0.2);
@@ -43,15 +43,15 @@ a {
 }
 body.active {
   --green: rgb(223, 42, 42);
-  --green: rgb(0, 106, 255);
+  --green: rgb(9, 116, 255);
   --black: #fff;
   --light-color: #ddd;
   /*     --bg-color:#222; */
   --bg-color: #1c1c1c;
   --border: 0.1rem solid rgb(0, 0, 0, 0.4);
   --box-shadow: 0.4rem 0.4rem 1rem #111, -0.4rem -0.4rem 1rem #333;
-  --box-shadow-inset: 0.4rem 0.4rem 1rem #111 inset,
-    -0.4rem -0.4rem 1rem #333 inset;
+  --box-shadow-inset: 0.4rem 0.4rem 1rem rgb(26, 26, 26) inset,
+    -0.4rem -0.4rem 1rem rgba(35, 35, 35, 0.748) inset;
 }
 section {
   min-height: 100vh;
@@ -627,7 +627,7 @@ section {
     width: 5rem;
     border-radius: 1.4rem;
     box-shadow: var(--box-shadow);
-    transition:none;
+    transition: none;
   }
   .header .user h1 {
     font-size: 0.001rem;
@@ -647,7 +647,7 @@ section {
     font-size: 1rem;
     border-radius: 0.9rem;
   }
-  
+
   .header .navbar span {
     font-size: 0.000007rem;
     display: none;
@@ -655,42 +655,36 @@ section {
   #menu-btn {
     display: initial;
   }
-  
+
   /* experement animation_____________________ */
   @keyframes menuCard {
     0% {
       left: -10%;
       box-shadow: 0 0 0 1000rem hsla(0, 0%, 50%, 0);
-      
+
       opacity: 0;
     }
     2% {
       box-shadow: 0 0 0 1000rem hsla(0, 0%, 50%, 0);
-      
+
       opacity: 0;
     }
     4% {
-      left: 0%;
-      box-shadow: 0 0 0 1000rem hsla(0, 0%, 0%, 0.541);
+      left: -100%;
+      box-shadow: 0 0 0 1000rem hsla(0, 0%, 0%, 0);
       width: auto;
       padding: 0rem;
-      
-      transform:scale(0.98);
-      opacity: 0;
-      border-radius:2rem;
-      
-      
+
+      opacity: 1;
     }
     100% {
       left: 0%;
       box-shadow: 0 0 0 500rem hsla(0, 0%, 0%, 0.541);
-      width: auto;
+      max-width:90%;
       padding: 0rem;
       
       overflow: hidden;
       border: none;
-      border-radius:2rem;
-      transform:scale(1.08);
       /* border-radius:0rem; */
     }
   }
@@ -701,20 +695,21 @@ section {
     left: 0%;
     /* transition: all 0.5s ease-in-out; */
     box-shadow: 0 0 0 500rem hsla(0, 0%, 0%, 0.541);
-    width: auto;
+    max-width:90%;
+    width:auto;
     /* padding: 2rem; */
     padding: 0rem;
-    
+
     /* transition:none; */
     overflow: hidden;
     border: none;
-    animation: menuCard 0.7s ease;
-    transform:scale(1.08);
+    animation: menuCard 0.9s ease;
+    
   }
   .header.active .user img {
     margin: 9rem 0 0 0;
     border: 1rem solid transparent;
-    
+
     height: 14rem;
     width: 14rem;
     border-radius: 20rem;
@@ -733,7 +728,7 @@ section {
   }
   .header.active .navbar a {
     text-align: left;
-    padding: 2rem 17rem 2rem 10rem;
+    padding: 2rem 15rem 2rem 10rem;
     /* padding-left:20%; */
     box-shadow: 0 0 0.1rem rgba(30, 30, 30, 0);
     width: 100%;
@@ -742,7 +737,7 @@ section {
     border-radius: 0;
   }
   .header.active .navbar a:hover {
-    background-color: rgba(128, 128, 128, 0.152);
+    background-color: rgba(128, 128, 128, 0.142);
   }
   .header.active .navbar span {
     display: inline-block;
