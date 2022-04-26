@@ -615,7 +615,7 @@ section {
   .header {
     left: 0%;
     box-shadow: 0 0 0 100rem hsla(0, 0%, 50%, 0);
-    width: 6.5rem;
+    width: 6rem;
     padding: 2rem -0.6rem 2rem 0.6rem;
     border-right: none;
     height: 100vh;
@@ -682,7 +682,7 @@ section {
     100% {
       left: 0%;
       box-shadow: 0 0 0 500rem hsla(0, 0%, 0%, 0.541);
-      max-width:90%;
+      max-width:85%;
       padding: 0rem;
       
       overflow: hidden;
@@ -697,7 +697,7 @@ section {
     left: 0%;
     /* transition: all 0.5s ease-in-out; */
     box-shadow: 0 0 0 500rem hsla(0, 0%, 0%, 0.541);
-    max-width:90%;
+    max-width:85%;
     width:auto;
     height:100vh;
     padding: 0rem;
@@ -713,25 +713,26 @@ section {
     margin: 9rem 0 0 0;
     border: 1rem solid transparent;
 
-    height: 14rem;
-    width: 14rem;
-    border-radius: 20rem;
+    height: 24rem;
+    width: 24rem;
+    border-radius: 8rem;
     box-shadow: var(--box-shadow);
   }
   .header.active .user h1 {
     display: block;
-    font-size: 3.5rem;
+    font-size: 5rem;
   }
   .header.active .user p {
     display: block;
-    font-size: 1.5rem;
+    margin-top:2rem;
+    font-size: 2.5rem;
   }
   .header.active .navbar a i {
-    font-size: 3.2rem;
+    font-size: 4.2rem;
   }
   .header.active .navbar a {
     text-align: left;
-    padding: 2rem 15rem 2rem 10rem;
+    padding: 2rem 15rem 2rem 8rem;
     /* padding-left:20%; */
     box-shadow: 0 0 0.1rem rgba(30, 30, 30, 0);
     width: 100%;
@@ -744,7 +745,7 @@ section {
   }
   .header.active .navbar span {
     display: inline-block;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-left: 1.6rem;
   }
   body .header #theme-toggler {
