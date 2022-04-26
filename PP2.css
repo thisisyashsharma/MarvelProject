@@ -619,12 +619,14 @@ section {
     padding: 2rem -0.6rem 2rem 0.6rem;
     border-right: none;
     height: 100vh;
+
+
   }
   .header .user img {
     /* change the margin 16rem and also menu top:1rem  */
     margin: 5.8rem 0 -1.5rem 0;
     border: 0.7rem solid transparent;
-
+    
     height: 5rem;
     width: 5rem;
     border-radius: 1.4rem;
@@ -705,7 +707,7 @@ section {
 
     overflow: hidden;
     border: none;
-    animation: menuCard 0.9s ease;
+    animation: menuCard 1.3s ease-in-out;
     border-bottom:2rem;
     
   }
@@ -713,9 +715,9 @@ section {
     margin: 9rem 0 0 0;
     border: 1rem solid transparent;
 
-    height: 24rem;
-    width: 24rem;
-    border-radius: 8rem;
+    height: 22rem;
+    width: 22rem;
+    border-radius: 6rem;
     box-shadow: var(--box-shadow);
   }
   .header.active .user h1 {
@@ -724,15 +726,15 @@ section {
   }
   .header.active .user p {
     display: block;
-    margin-top:2rem;
-    font-size: 2.5rem;
+    margin:2rem 0 1rem 0;
+    font-size: 2rem;
   }
   .header.active .navbar a i {
-    font-size: 4.2rem;
+    font-size: 3.5rem;
   }
   .header.active .navbar a {
     text-align: left;
-    padding: 2rem 15rem 2rem 8rem;
+    padding: 1.7rem 15rem 1.7rem 8rem;
     /* padding-left:20%; */
     box-shadow: 0 0 0.1rem rgba(30, 30, 30, 0);
     width: 100%;
@@ -745,10 +747,10 @@ section {
   }
   .header.active .navbar span {
     display: inline-block;
-    font-size: 2.5rem;
-    margin-left: 1.6rem;
+    font-size: 2.1rem;
+    margin-left: 1.8rem;
   }
-  body .header #theme-toggler {
+  .header.active #menu-btn {
     opacity: 0;
     box-shadow: 0 0 0 rgba(255, 0, 0, 0);
   }
