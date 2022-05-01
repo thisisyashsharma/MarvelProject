@@ -792,7 +792,7 @@ section {
   }
   .container {
     cursor: pointer;
-    padding: 0rem 0.1rem 0rem 0.1rem;
+    padding: 0rem 0.1rem 0.5rem 0.1rem;
     font-size: 2.4rem;
     height: 100%;
     /* right:0rem; */
@@ -822,8 +822,8 @@ section {
   }
   .container li div a {
     margin: 0rem 0 0.2rem 0;
-    font-size: 3.4rem;
-    padding: 1.4rem 3rem;
+    font-size: 3.1rem;
+    padding: 1.2rem 3.3rem;
     border-radius: 5rem;
     transition: all 0.07s;
 
