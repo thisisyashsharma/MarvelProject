@@ -788,13 +788,12 @@ section {
 
     background: var(--bg-color);
     
-    z-index: 12;
+    z-index: 20;
   }
   .container {
     cursor: pointer;
-    padding: 0rem 0.1rem 0.2rem 0.1rem;
+    padding: 0rem 0.1rem 0.6rem 0.1rem;
     font-size: 2.4rem;
-    bottom: 0rem;
     height: 9rem;
     /* right:0rem; */
     width: 100%;
@@ -805,7 +804,7 @@ section {
     align-items: center;
     justify-content: space-between;
 
-    background: hsla(225, 16%, 48%, 0.078);
+    background: hsla(225, 6%, 51%, 0.155);
     /* border-top: 0.1rem solid hsl(255, 0%, 90%); */
   }
 
@@ -831,9 +830,10 @@ section {
     display: flex;
     align-items: center;
 
-    color: hsl(0, 0%, 27%);
+    /* color: hsl(0, 0%, 27%); */
+    color: var(--black);
   }
-
+  
   .container li div:hover > a,
   .container li div a:active,
   .container li div a.active {
@@ -841,17 +841,15 @@ section {
     transform: scale(0.85);
     color: var(--green);
     font-weight: bold;
-    /* box-shadow: var(--box-shadow); */
   }
   .container li div i {
-    font-size: 2.4rem;
-    color: var(--black);
+    font-size: 2.7rem;
   }
 
   .container li span {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.02rem;
   }
 }
