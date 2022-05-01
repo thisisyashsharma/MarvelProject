@@ -783,7 +783,7 @@ section {
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 9rem;
+    height: 11rem;
     width: 100%;
 
     background: var(--bg-color);
@@ -792,10 +792,9 @@ section {
   }
   .container {
     cursor: pointer;
-    padding: 0rem 0.1rem 0.6rem 0.1rem;
+    padding: 0rem 0.1rem 0rem 0.1rem;
     font-size: 2.4rem;
-    bottom: 0rem;
-    height: 9rem;
+    height: 100%;
     /* right:0rem; */
     width: 100%;
     color: var(--black);
@@ -823,8 +822,8 @@ section {
   }
   .container li div a {
     margin: 0rem 0 0.2rem 0;
-    font-size: 1.7rem;
-    padding: 1.2rem 2.9rem;
+    font-size: 3.4rem;
+    padding: 1.4rem 3rem;
     border-radius: 5rem;
     transition: all 0.07s;
 
@@ -840,11 +839,11 @@ section {
   .container li div a.active {
     background-color: hsla(225, 73%, 63%, 0.152);
     transform: scale(0.85);
-    color: var(--green);
     font-weight: bold;
+    color: var(--black);
   }
   .container li div i {
-    font-size: 2.7rem;
+    /* font-size: 2.9rem; */
   }
 
   .container li span {
