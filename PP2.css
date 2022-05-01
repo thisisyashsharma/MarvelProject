@@ -775,34 +775,38 @@ section {
 
 @media (max-width: 700px) {
   .sectionR {
-    display:inline-block;
-    background: var(--bg-color);
-    
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 9rem;
+    width: 100%;
+
+    backdrop-filter: blur(200rem);
+    -webkit-backdrop-filter: blur(200rem);
+    background: hsla(225, 23%, 67%, 0.02);
+
   }
   .container {
     cursor: pointer;
-    position: fixed;
     padding: 0rem 0.1rem 0.2rem 0.1rem;
-    bottom: 0rem;
-    left: 0;
     font-size: 2.4rem;
-    /* right:0rem; */
+    bottom: 0rem;
     height: 9rem;
+    /* right:0rem; */
     width: 100%;
     color: var(--black);
     border: none;
-    
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 12;
-    
+
     background: hsla(226, 22%, 47%, 0.097);
     /* border-top: 0.1rem solid hsl(255, 0%, 90%); */
-    backdrop-filter: blur(200rem);
-    -webkit-backdrop-filter: blur(200rem);
   }
-  
+
   .container li {
     list-style: none;
     width: 100%;
