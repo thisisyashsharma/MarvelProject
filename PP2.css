@@ -800,7 +800,7 @@ section {
     justify-content: space-between;
     z-index: 12;
     
-    background: hsla(226, 51%, 52%, 0.068);
+    background: hsla(226, 39%, 52%, 0.04);
     /* border-top: 0.1rem solid hsl(255, 0%, 90%); */
     backdrop-filter: blur(200rem);
   }
@@ -833,7 +833,7 @@ section {
   .container li div:hover > a,
   .container li div a:active,
   .container li div a.active {
-    background-color: hsla(225, 100%, 75%, 0.163);
+    background-color: hsla(225, 46%, 52%, 0.044);
     transform: scale(0.85);
     color: var(--green);
     font-weight: bold;
