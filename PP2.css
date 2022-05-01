@@ -788,12 +788,13 @@ section {
 
     background: var(--bg-color);
     
-    z-index: 20;
+    z-index: 12;
   }
   .container {
     cursor: pointer;
     padding: 0rem 0.1rem 0.6rem 0.1rem;
     font-size: 2.4rem;
+    bottom: 0rem;
     height: 9rem;
     /* right:0rem; */
     width: 100%;
@@ -804,7 +805,7 @@ section {
     align-items: center;
     justify-content: space-between;
 
-    background: hsla(225, 6%, 51%, 0.155);
+    background: hsla(225, 16%, 48%, 0.078);
     /* border-top: 0.1rem solid hsl(255, 0%, 90%); */
   }
 
