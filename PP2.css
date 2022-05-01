@@ -45,8 +45,8 @@ a {
 body.active {
   --green: rgb(223, 42, 42);
   --green: rgb(9, 116, 255);
-  --black: #fff;
-  --light-color: #ddd;
+  --black: hsl(0, 0%, 82%);
+  --light-color: hsl(0, 0%, 75%);
   /*     --bg-color:#222; */
   --bg-color: #1c1c1c;
   --border: 0.1rem solid rgb(0, 0, 0, 0.4);
