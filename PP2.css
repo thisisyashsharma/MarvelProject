@@ -782,9 +782,7 @@ section {
     height: 9rem;
     width: 100%;
 
-    backdrop-filter: blur(200rem);
-    -webkit-backdrop-filter: blur(200rem);
-    background: hsla(225, 23%, 67%, 0.02);
+    background: var(--bg-color);
 
   }
   .container {
@@ -803,7 +801,7 @@ section {
     justify-content: space-between;
     z-index: 12;
 
-    background: hsla(226, 22%, 47%, 0.097);
+    background: hsla(225, 16%, 48%, 0.078);
     /* border-top: 0.1rem solid hsl(255, 0%, 90%); */
   }
 
