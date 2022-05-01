@@ -632,11 +632,8 @@ section {
     box-shadow: var(--box-shadow);
     transition: none;
   }
-  .header .user h1 {
-    font-size: 0.001rem;
-  }
+  .header .user h1,
   .header .user p {
-    font-size: 0.001rem;
     display: none;
   }
   .header .navbar a i {
@@ -803,6 +800,7 @@ section {
     background: hsla(226, 39%, 52%, 0.04);
     /* border-top: 0.1rem solid hsl(255, 0%, 90%); */
     backdrop-filter: blur(200rem);
+    -webkit-backdrop-filter: blur(200rem);
   }
   
   .container li {
