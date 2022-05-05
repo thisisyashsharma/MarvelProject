@@ -3,8 +3,10 @@
 :root {
   /* --green: rgb(11, 177, 66); */
   --green: hsl(25, 100%, 57%);
-  --black: rgb(90, 90, 90);
   --light-color: rgb(165, 165, 165);
+  --black: hsl(0, 0%, 35%);
+  --blackk: hsl(0, 0%, 45%);
+
   --bg-color: #e9e9e9;
   --border: 0.1rem solid rgb(0, 0, 0, 0.2);
   --box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.093),
@@ -43,9 +45,10 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body.active {
-  --green: rgb(223, 42, 42);
   --green: rgb(9, 116, 255);
   --black: hsl(0, 0%, 82%);
+  --blackk: hsl(224, 25%, 59%);
+
   --light-color: hsl(0, 0%, 75%);
   /*     --bg-color:#222; */
   --bg-color: #1c1c1c;
@@ -602,9 +605,44 @@ section {
   color: var(--green);
 }
 
+::-webkit-scrollbar-track {
+  width: 2.5vw;
+  background: rgba(128, 128, 128, 0);
+}
+::-webkit-scrollbar {
+  
+  width: 2.5vw;
+  z-index: 14;
+  position: fixed;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(114, 114, 114, 0.171);
+  border: 0.8vw solid transparent;
+  border-radius: 1.6rem;
+  background-clip: content-box;
+}
+
 /* media queries */
 /* _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________ */
 @media (max-width: 991px) {
+  ::-webkit-scrollbar-track {
+    width: 2vw;
+    background: rgba(128, 128, 128, 0);
+  }
+  ::-webkit-scrollbar {
+    width: 2vw;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(114, 114, 114, 0.171);
+    border-radius: 0.5rem;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    /* background: var(--green); */
+    background-clip: content-box;
+    background: rgba(91, 91, 91, 0.171);
+    box-shadow: var(--box-shadow);
+  }
   html {
     font-size: 55%;
   }
@@ -707,7 +745,9 @@ section {
     animation: menuCard 1.3s ease-in-out;
     border-bottom: 2rem;
     background: var(--bg-color);
+    overflow-y: visible;
   }
+
   .header.active .user img {
     margin: 9rem 0 0 0;
     border: 1rem solid transparent;
@@ -754,7 +794,7 @@ section {
 
   .credits {
     margin-bottom: 10rem;
-}
+  }
 }
 
 @media (max-width: 450px) {
@@ -784,19 +824,18 @@ section {
     left: 0;
     bottom: 0;
     height: 11rem;
-    width: 100%;
+    width: 100vw;
 
     background: var(--bg-color);
-    
-    z-index: 12;
+
+    z-index: 15;
   }
   .container {
     cursor: pointer;
     padding: 0rem 0.1rem 0.5rem 0.1rem;
-    font-size: 2.4rem;
     height: 100%;
     /* right:0rem; */
-    width: 100%;
+    width: 100vw;
     color: var(--black);
     border: none;
 
@@ -822,7 +861,7 @@ section {
   }
   .container li div a {
     margin: 0rem 0 0.2rem 0;
-    font-size: 3.1rem;
+    font-size: 2.9rem;
     padding: 1.2rem 3.3rem;
     border-radius: 5rem;
     transition: all 0.07s;
@@ -831,25 +870,26 @@ section {
     align-items: center;
 
     /* color: hsl(0, 0%, 27%); */
-    color: var(--black);
+    color: var(--blackk);
   }
-  
-  .container li div:hover > a,
-  .container li div a:active,
-  .container li div a.active {
-    background-color: hsla(225, 73%, 63%, 0.152);
-    transform: scale(0.85);
-    font-weight: bold;
-    color: var(--black);
-  }
+
   .container li div i {
     /* font-size: 2.9rem; */
   }
 
   .container li span {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0.02rem;
+    color: var(--blackk);
+  }
+  .container li div:hover > a,
+  .container li div a:active,
+  .container li div a.active {
+    background-color: hsla(225, 100%, 66%, 0.172);
+    transform: scale(0.82);
+    font-weight: bold;
+    color: var(--black);
   }
 }
