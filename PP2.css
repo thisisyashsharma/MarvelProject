@@ -860,7 +860,7 @@ section {
     color: var(--black);
   }
   
-  .container li:hover {
+  .container li:active {
     background-color: hsla(0, 0%, 47%, 0.1);
     border-color: hsla(0, 0%, 47%, 0.1);
   }
