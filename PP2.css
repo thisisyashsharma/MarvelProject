@@ -711,7 +711,7 @@ section {
     animation: menuCard 1.3s ease-in-out;
     border-bottom: 2rem;
     background: var(--bg-color);
-    /* overflow-y: visible; */
+    overflow-y: visible;
   }
 
   /* scrollbar style */
