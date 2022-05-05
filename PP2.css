@@ -842,7 +842,9 @@ section {
     justify-content: center;
     flex-direction: column;
     
- 
+    
+    transition: border 1s ease-in-out;
+    border:0.15rem solid rgba(255, 0, 0, 0);
   }
   .container li div a {
     margin: 0rem 0 0.2rem 0;
@@ -850,16 +852,17 @@ section {
     padding: 1.2rem 3.4rem;
     border-radius: 5rem;
     transition: all 0.07s;
-
+    
     display: flex;
     align-items: center;
-
+    
     /* color: hsl(0, 0%, 27%); */
     color: var(--black);
   }
-
-  .container li:active {
-    background-color: hsla(0, 0%, 40%, 0.175);
+  
+  .container li:hover {
+    background-color: hsla(0, 0%, 47%, 0.1);
+    border-color: hsla(0, 0%, 47%, 0.1);
   }
 
   .container li span {
