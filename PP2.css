@@ -7,7 +7,7 @@
   --black: hsl(0, 0%, 35%);
   --blackk: hsl(0, 0%, 45%);
 
-  --bg-color: #e9e9e9;
+  --bg-color: hsl(222, 7%, 90%);
   --border: 0.1rem solid rgb(0, 0, 0, 0.2);
   --box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.093),
     -0.4rem -0.4rem 1rem #fff;
@@ -51,7 +51,7 @@ body.active {
 
   --light-color: hsl(0, 0%, 75%);
   /*     --bg-color:#222; */
-  --bg-color: #1c1c1c;
+  --bg-color: hsl(222, 7%, 11%);
   --border: 0.1rem solid rgb(0, 0, 0, 0.4);
   --box-shadow: 0.4rem 0.4rem 1rem #111, -0.4rem -0.4rem 1rem #333;
   --box-shadow-inset: 0.4rem 0.4rem 1rem rgb(26, 26, 26) inset,
@@ -605,46 +605,12 @@ section {
   color: var(--green);
 }
 
-::-webkit-scrollbar-track {
-  width: 2.5vw;
-  background: rgba(128, 128, 128, 0);
-}
-::-webkit-scrollbar {
-  
-  width: 2.5vw;
-  z-index: 14;
-  position: fixed;
-  background-clip: content-box;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(114, 114, 114, 0.171);
-  border: 0.8vw solid transparent;
-  border-radius: 1.6rem;
-  background-clip: content-box;
-}
-
 /* media queries */
 /* _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________ */
 @media (max-width: 991px) {
-  ::-webkit-scrollbar-track {
-    width: 2vw;
-    background: rgba(128, 128, 128, 0);
-  }
-  ::-webkit-scrollbar {
-    width: 2vw;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgba(114, 114, 114, 0.171);
-    border-radius: 0.5rem;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    /* background: var(--green); */
-    background-clip: content-box;
-    background: rgba(91, 91, 91, 0.171);
-    box-shadow: var(--box-shadow);
-  }
   html {
     font-size: 55%;
+
   }
   body {
     padding-left: 7.5rem;
@@ -745,7 +711,25 @@ section {
     animation: menuCard 1.3s ease-in-out;
     border-bottom: 2rem;
     background: var(--bg-color);
-    overflow-y: visible;
+    /* overflow-y: visible; */
+  }
+
+  /* scrollbar style */
+  .header.active::-webkit-scrollbar-track {
+    width: 2vw;
+    background: rgba(128, 128, 128, 0);
+  }
+  .header.active::-webkit-scrollbar {
+    width: 2vw;
+  }
+  .header.active::-webkit-scrollbar-thumb {
+    background: rgba(114, 114, 114, 0.171);
+    border-radius: 0.5rem;
+  }
+  .header.active::-webkit-scrollbar-thumb:hover {
+    background-clip: content-box;
+    background: rgba(91, 91, 91, 0.171);
+    box-shadow: var(--box-shadow);
   }
 
   .header.active .user img {
@@ -843,7 +827,7 @@ section {
     align-items: center;
     justify-content: space-between;
 
-    background: hsla(225, 16%, 48%, 0.078);
+    background: hsla(225, 87%, 63%, 0.078);
     /* border-top: 0.1rem solid hsl(255, 0%, 90%); */
   }
 
@@ -862,7 +846,7 @@ section {
   .container li div a {
     margin: 0rem 0 0.2rem 0;
     font-size: 2.9rem;
-    padding: 1.2rem 3.3rem;
+    padding: 1.3rem 3.4rem;
     border-radius: 5rem;
     transition: all 0.07s;
 
@@ -888,7 +872,7 @@ section {
   .container li div a:active,
   .container li div a.active {
     background-color: hsla(225, 100%, 66%, 0.172);
-    transform: scale(0.82);
+    transform: scale(0.86);
     font-weight: bold;
     color: var(--black);
   }
